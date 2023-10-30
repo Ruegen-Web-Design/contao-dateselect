@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    RuegenWebDesign\DateselectBundle\:
+        resource: ../src/
+        exclude: ../src/Widget

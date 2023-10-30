@@ -1,0 +1,45 @@
+{
+    "name": "ruegen-web-design/contao-dateselect",
+    "description": "Dates select menu for Contao forms",
+    "license": "MIT",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "Rügen Web Design GmbH",
+            "homepage": "https://wwww.ruegen-web-design.de"
+        },
+        {
+            "name": "Dietrich Bojko",
+            "homepage": "https://webinteger.dev"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ruegen-web-design/contao-dateselect/issues",
+        "source": "https://github.com/ruegen-web-design/contao-dateselect",
+        "forum": "https://community.contao.org"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.13 || ^5.0",
+        "symfony/polyfill-php80": "*"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "contao/core-bundle": "^4.13"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RuegenWebDesign\\DateselectBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "RuegenWebDesign\\DateselectBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check src/ --config tools/ecs/config.php --fix --ansi",
+        "rector": "@php tools/rector/vendor/bin/rector --config tools/rector/config.php --ansi"
+    }
+}
