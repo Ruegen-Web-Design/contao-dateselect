@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace RuegenWebDesign\DateselectBundle\Widget;
 
-use StringUtil;
+use Contao\StringUtil;
 use Contao\Date;
 use Contao\FormSelect;
 use Contao\FormSelectMenu;
