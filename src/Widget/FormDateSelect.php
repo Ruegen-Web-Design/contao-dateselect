@@ -43,12 +43,16 @@ class FormDateSelect extends FormSelect
                 while ($startDate <= $endDate) {
                     $time = explode(".", $startDate->format('d.m.Y'));
                     $time = mktime(0, 0, 0, intval($time[1]), intval($time[0]), intval($time[2]));
-                    $ordertime = Date::parse('d.m.Y', $time);
+                    $ordertime = Date::parse('Y-m-d', $time);
                     $day = Date::parse('l', $time);
                     $dayNumber = Date::parse('w', $time);
 
                     if (!in_array($dayNumber, StringUtil::deserialize($this->exclude_week_days, true))) {
-                        $options[] = ['label' => $day . ', ' . $ordertime, 'value' => $ordertime];
+                        if (isset($this->date_format) && $this->date_format) {
+                            $options[] = ['label' => Date::parse($this->date_format, $time), 'value' => $ordertime];
+                        } else {
+                            $options[] = ['label' => $day . ', ' . $ordertime, 'value' => $ordertime];
+                        }
                     }
 
                     $startDate = date_modify($startDate, '+1 day');
