@@ -13,13 +13,11 @@
         {
             "name": "Rügen Web Design GmbH",
             "homepage": "https://wwww.ruegen-web-design.de",
-            "email": "info@ruegen-web-design.de",
             "role": "Manager"
         },
         {
             "name": "Dietrich Bojko",
             "homepage": "https://webinteger.dev",
-            "email": "info@webinteger.dev",
             "role": "Developer"
         }
     ],

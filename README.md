@@ -1,4 +1,4 @@
-# Contao Date-Select
+# Simple Date-Select Field For Contao Open Source CMS
 
 
 `ruegen-web-design/contao-dateselect` is an extension the [Contao CMS](https://contao.org).
