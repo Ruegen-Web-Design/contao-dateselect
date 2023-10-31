@@ -41,11 +41,10 @@ class FormDateSelect extends FormSelect
                 while ($startDate <= $endDate) {
                     $time = explode(".", $startDate->format('d.m.Y'));
                     $time = mktime(0, 0, 0, intval($time[1]), intval($time[0]), intval($time[2]));
-                    $ordertime = $this->parseDate('d.m.Y', $time);
-                    $day = $this->parseDate('l', $time);
-                    $dayNumber = $this->parseDate('w', $time);
+                    $ordertime = \Contao\Date::parse('d.m.Y', $time);
+                    $day = \Contao\Date::parse('l', $time);
+                    $dayNumber = \Contao\Date::parse('w', $time);
 
-                    // if (!in_array($dayNumber, unserialize($this->exclude_week_days))) {
                     if (!in_array($dayNumber, \StringUtil::deserialize($this->exclude_week_days, true))) {
                         $options[] = ['label' => $day . ', ' . $ordertime, 'value' => $ordertime];
                     }
