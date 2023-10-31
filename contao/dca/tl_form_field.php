@@ -5,14 +5,14 @@ $GLOBALS['TL_DCA']['tl_form_field']['palettes']['dateselect'] = '{type_legend},t
 $GLOBALS['TL_DCA']['tl_form_field']['fields']['order_time_from'] = [
     'exclude'   => true,
     'inputType' => 'text',
-    'eval'      => ['tl_class' => 'w50 clr', 'datepicker' => true],
+    'eval'      => array('tl_class' => 'w50 clr', 'datepicker' => true),
     'sql'       => 'text NULL',
 ];
 
 $GLOBALS['TL_DCA']['tl_form_field']['fields']['order_time_until'] = [
     'exclude'   => true,
     'inputType' => 'text',
-    'eval'      => ['tl_class' => 'w50', 'datepicker' => true],
+    'eval'      => array('tl_class' => 'w50', 'datepicker' => true),
     'sql'       => 'text NULL',
 ];
 
@@ -21,6 +21,6 @@ $GLOBALS['TL_DCA']['tl_form_field']['fields']['exclude_week_days'] = [
     'inputType' => 'checkbox',
     'options'   => array("1", "2", "3", "4", "5", "6", "0"),
     'reference' => &$GLOBALS['TL_LANG']['DAYS'],
-    'eval'      => ['multiple' => true, 'tl_class' => 'w50 clr'],
-    'sql'       => ['type' => 'blob'],
+    'eval'      => array('multiple' => true, 'tl_class' => 'w50 clr'),
+    'sql'       => 'blob NULL',
 ];
