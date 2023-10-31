@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace RuegenWebDesign\DateselectBundle\Widget;
 
+use StringUtil;
+use Contao\Date;
 use Contao\FormSelect;
 use Contao\FormSelectMenu;
 
@@ -41,11 +43,11 @@ class FormDateSelect extends FormSelect
                 while ($startDate <= $endDate) {
                     $time = explode(".", $startDate->format('d.m.Y'));
                     $time = mktime(0, 0, 0, intval($time[1]), intval($time[0]), intval($time[2]));
-                    $ordertime = \Contao\Date::parse('d.m.Y', $time);
-                    $day = \Contao\Date::parse('l', $time);
-                    $dayNumber = \Contao\Date::parse('w', $time);
+                    $ordertime = Date::parse('d.m.Y', $time);
+                    $day = Date::parse('l', $time);
+                    $dayNumber = Date::parse('w', $time);
 
-                    if (!in_array($dayNumber, \StringUtil::deserialize($this->exclude_week_days, true))) {
+                    if (!in_array($dayNumber, StringUtil::deserialize($this->exclude_week_days, true))) {
                         $options[] = ['label' => $day . ', ' . $ordertime, 'value' => $ordertime];
                     }
 
