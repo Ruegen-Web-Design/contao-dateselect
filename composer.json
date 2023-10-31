@@ -1,21 +1,31 @@
 {
     "name": "ruegen-web-design/contao-dateselect",
-    "description": "Dates select menu for Contao forms",
+    "description": "Simple frontend dates select field for Contao Open Source CMS forms",
+    "keywords": [
+        "contao",
+        "calendar select field",
+        "dates",
+        "forms"
+    ],
     "license": "MIT",
     "type": "contao-bundle",
     "authors": [
         {
             "name": "Rügen Web Design GmbH",
-            "homepage": "https://wwww.ruegen-web-design.de"
+            "homepage": "https://wwww.ruegen-web-design.de",
+            "email": "info@ruegen-web-design.de",
+            "role": "Manager"
         },
         {
             "name": "Dietrich Bojko",
-            "homepage": "https://webinteger.dev"
+            "homepage": "https://webinteger.dev",
+            "email": "info@webinteger.dev",
+            "role": "Developer"
         }
     ],
     "support": {
-        "issues": "https://github.com/ruegen-web-design/contao-dateselect/issues",
-        "source": "https://github.com/ruegen-web-design/contao-dateselect",
+        "issues": "https://github.com/Ruegen-Web-Design/contao-dateselect/issues",
+        "source": "https://github.com/Ruegen-Web-Design/contao-dateselect",
         "forum": "https://community.contao.org"
     },
     "require": {
@@ -25,7 +35,7 @@
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
-        "contao/core-bundle": "^4.13"
+        "contao/core-bundle": "^4.13 || ^5.0"
     },
     "conflict": {
         "contao/manager-plugin": "<2.0 || >=3.0"
@@ -37,9 +47,5 @@
     },
     "extra": {
         "contao-manager-plugin": "RuegenWebDesign\\DateselectBundle\\ContaoManager\\Plugin"
-    },
-    "scripts": {
-        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check src/ --config tools/ecs/config.php --fix --ansi",
-        "rector": "@php tools/rector/vendor/bin/rector --config tools/rector/config.php --ansi"
     }
 }

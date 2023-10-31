@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="contao/languages/en/default.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="FFL.dateselect.0">
+                <source>Dates Select-Menu</source>
+                <target>Datum Select-Menü</target>
+            </trans-unit>
+            <trans-unit id="FFL.dateselect.1">
+                <source>Shows a select menu containing selected dates.</source>
+                <target>Zeigt ein Select-Menü mit ausgewällten Datum.</target>
+            </trans-unit>
+            <trans-unit id="ERR.dateselect_important">
+                <source>Invalid input: %s</source>
+                <target>Ungültige Eingabe: %s</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
