@@ -8,6 +8,7 @@ use Contao\StringUtil;
 use Contao\Date;
 use Contao\FormSelect;
 use Contao\FormSelectMenu;
+use Contao\Config;
 
 // Backwards compatibility for Contao 4.13
 // The FormSelectMenu class was renamed to FormSelect in Contao 5.0
@@ -43,7 +44,7 @@ class FormDateSelect extends FormSelect
                 while ($startDate <= $endDate) {
                     $time = explode(".", $startDate->format('d.m.Y'));
                     $time = mktime(0, 0, 0, intval($time[1]), intval($time[0]), intval($time[2]));
-                    $ordertime = Date::parse('Y-m-d', $time);
+                    $ordertime = Date::parse(Config::get('dateFormat'), $time);
                     $day = Date::parse('l', $time);
                     $dayNumber = Date::parse('w', $time);
 
